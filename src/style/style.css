@@ -1,0 +1,130 @@
+/* ========== CORES DO SITE ========== */
+:root{
+    --color-primary: #a203c2;
+    --color-secondary: #8802a3;
+    --color-bg: #000000;
+    --color-txt: #ffffff;
+    --color-menu: #111111;
+    --color-painel: #1a1a1a;
+}
+
+/* ========== RESET & BASE ========== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-user-drag: none;
+}
+body{
+    background: var(--color-bg);
+    color: var(--color-txt);
+    font-family: "Exo 2", sans-serif;
+    display: flex;
+}
+
+/* ========== GERAL ========== */
+.conteudo{
+    flex: 1;
+    padding: 1rem;
+}
+h2, h3{
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+a{
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+/* ========== MENU LATERAL ========== */
+.menu{
+    background: var(--color-menu);
+    border-radius: 0 1.25rem 1.25rem 0;
+    width: 15.625rem;
+    min-height: 100vh;
+    padding: 0.625rem;
+}
+.foto-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.foto-menu img{
+    width: 70px;
+    height: 70px;
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+}
+.foto-menu h1{
+    font-size: 1.6rem;
+    margin-top: 1.25rem;
+    line-height: 1.2;
+    text-align: center;
+}
+.foto-menu h1 span{
+    display: block;
+    font-size: 1.1rem;
+    color: var(--color-secondary);
+}
+.menu-opcoes ul{
+    list-style: none;
+    margin-top: 2rem;
+}
+.menu-opcoes li{
+    margin: 0.625rem 0;
+}
+.menu-opcoes a{
+    color: var(--color-txt);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+.menu-opcoes a:hover{
+    background: var(--color-secondary);
+}
+
+/* ========== PAINEL PRINICIPAL ========== */
+.painel{
+    background: var(--color-painel);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+/* ========== COMANDOS ========== */
+.comandos ul{
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+/* ========== CONFIGURAÇÕES ========== */
+.configuracoes label{
+    display: block;
+    margin: 0.5rem 0;
+}
+
+/* ========== FUNÇÃO ========== */
+
+/* ========== FUNÇÃO ========== */
+
+/* ========== FUNÇÃO ========== */
+
+/* ========== FUNÇÃO ========== */
+
+/* ========== FUNÇÃO ========== */
+
+/* ========== FOOTER ========== */
+.rodape{
+    position: fixed;
+    bottom: 0;
+    left: 250px;
+    width: calc(100% - 250px);
+    text-align: center;
+    padding: 1rem;
+    background: var(--color-painel);
+    font-size: 0.9rem;
+}
