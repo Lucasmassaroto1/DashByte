@@ -31,37 +31,24 @@
         </nav>
     </div>
     <main class="conteudo">
-        <section class="painel">
-            <h2>Dashboard do ByteCode</h2>
+        <header class="welcome">
+            <h1>Dashboard do ByteCode</h1>
             <p>Configure o ByteCode de forma simples e rápida.</p>
-        </section>
-        <section class="comandos">
-            <h3>Comandos disponíveis</h3>
-            <ul>
-                <li><strong>/ajuda</strong> - Mostra todos os comandos</li>
-                <li><strong>/limpar</strong> - Limpa mensagens do canal</li>
-                <li><strong>/banir</strong> - Bane um usuário</li>
-            </ul>
-        </section>
-        <section class="configuracoes">
-            <h3>Configurações do servidor</h3>
-            <label>
-                <input type="checkbox" checked disabled>
-                Moderação automática ativada
-            </label><br>
-            <label>
-                <input type="checkbox" disabled>
-                Boas-vindas automáticas
-            </label>
-        </section>
-        <section class="sobre">
-            <h3>Sobre o Criador</h3>
-            <p>Este bot foi criado por <strong>Lucas Massaroto</strong>. Acompanhe o desenvolvimento no GitHub:</p>
-            <a href="https://github.com/Lucasmassaroto1" target="_blank">github.com/Lucasmassaroto1</a>
-        </section>
+        </header>
+        <div class="card-status">
+            <div class="card-header">
+                <i class="fas fa-robot"></i>
+                <h2>Status do ByteCode</h2>
+            </div>
+            <div class="card-body">
+                <p><strong>Status:</strong> <span class="status online">Online</span></p>
+                <p><strong>Servidores:</strong> 2</p>
+            </div>
+        </div>
     </main>
     <footer class="rodape">
         <p>&copy; 2025 ByteCode Bot — Todos os direitos reservados.</p>
     </footer>
+    <script src="src/script/script.js"></script>
 </body>
 </html>

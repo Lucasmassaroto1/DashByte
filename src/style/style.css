@@ -1,11 +1,13 @@
 /* ========== CORES DO SITE ========== */
 :root{
-    --color-primary: #a203c2;
-    --color-secondary: #8802a3;
+    --color-primary: #c003e6;
+    --color-secondary: #76028d;
     --color-bg: #000000;
     --color-txt: #ffffff;
     --color-menu: #111111;
     --color-painel: #1a1a1a;
+    --status-online: #00ff88;
+    --status-offline: #ff5555;
 }
 
 /* ========== RESET & BASE ========== */
@@ -26,14 +28,6 @@ body{
 .conteudo{
     flex: 1;
     padding: 1rem;
-}
-h2, h3{
-    color: var(--color-primary);
-    margin-bottom: 1rem;
-}
-a{
-    color: var(--color-secondary);
-    text-decoration: none;
 }
 
 /* ========== MENU LATERAL ========== */
@@ -64,7 +58,7 @@ a{
 .foto-menu h1 span{
     display: block;
     font-size: 1.1rem;
-    color: var(--color-secondary);
+    color: var(--color-primary);
 }
 .menu-opcoes ul{
     list-style: none;
@@ -88,34 +82,60 @@ a{
 }
 
 /* ========== PAINEL PRINICIPAL ========== */
-.painel{
+.welcome{
     background: var(--color-painel);
-    padding: 2rem;
-    border-radius: 12px;
+    border-radius: 0.625rem;
+    padding: 1rem;
     margin-bottom: 2rem;
 }
-
-/* ========== COMANDOS ========== */
-.comandos ul{
-    list-style: disc;
-    padding-left: 1.5rem;
+.welcome h1{
+    color: var(--color-primary);
+    font-size: 2rem;
+}
+.welcome p{
+    font-size: 1.25rem;
 }
 
-/* ========== CONFIGURAÇÕES ========== */
-.configuracoes label{
-    display: block;
+.card-status{
+    background: var(--color-painel);
+    border-left: 5px solid var(--color-secondary);
+    padding: 1rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0 10px rgba(162, 3, 194, 0.2);
+    max-width: 400px;
+    margin-bottom: 2rem;
+}
+.card-header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+.card-header i{
+    font-size: 1.5rem;
+    color: var(--color-primary);
+}
+.card-header h2{
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin: 0;
+}
+.card-body p{
+    font-size: 1.1rem;
     margin: 0.5rem 0;
 }
+.card-body .status{
+    font-weight: bold;
+}
+.card-body .status.online{
+    color: var(--status-online);
+}
+.card-body .status.offline{
+    color: var(--status-offline);
+}
+/* ========== COMANDOS ========== */
 
-/* ========== FUNÇÃO ========== */
-
-/* ========== FUNÇÃO ========== */
-
-/* ========== FUNÇÃO ========== */
-
-/* ========== FUNÇÃO ========== */
-
-/* ========== FUNÇÃO ========== */
+/* ========== CONFIGURAÇÕES ========== */
 
 /* ========== FOOTER ========== */
 .rodape{
@@ -128,3 +148,7 @@ a{
     background: var(--color-painel);
     font-size: 0.9rem;
 }
+
+/* ========== ANIMAÇÕES ========== */
+
+/* ========== KEYFRAMES ANIMAÇÕES ========== */
