@@ -1,13 +1,13 @@
 /* ========== CORES DO SITE ========== */
 :root{
-    --color-primary: #c003e6;
-    --color-secondary: #76028d;
-    --color-bg: #000000;
-    --color-txt: #ffffff;
-    --color-menu: #111111;
+    --primary-color: #c003e6;
+    --secondary-color: #76028d;
+    --background-color: #000000;
+    --text-color: #ffffff;
+    --card-background: #3d3d3d;
     --color-painel: #1a1a1a;
-    --status-online: #00ff88;
-    --status-offline: #ff5555;
+    --success-color: #00ff88;
+    --danger-color: #ff5555;
 }
 
 /* ========== RESET & BASE ========== */
@@ -18,21 +18,22 @@
     -webkit-user-drag: none;
 }
 body{
-    background: var(--color-bg);
-    color: var(--color-txt);
+    background: var(--background-color);
+    color: var(--text-color);
     font-family: "Exo 2", sans-serif;
-    display: flex;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: 100vh;
 }
 
 /* ========== GERAL ========== */
 .conteudo{
-    flex: 1;
     padding: 1rem;
 }
 
 /* ========== MENU LATERAL ========== */
 .menu{
-    background: var(--color-menu);
+    background: var(--color-painel);
     border-radius: 0 1.25rem 1.25rem 0;
     width: 15.625rem;
     min-height: 100vh;
@@ -46,7 +47,7 @@ body{
 .foto-menu img{
     width: 70px;
     height: 70px;
-    border: 2px solid var(--color-primary);
+    border: 2px solid var(--primary-color);
     border-radius: 50%;
 }
 .foto-menu h1{
@@ -58,7 +59,7 @@ body{
 .foto-menu h1 span{
     display: block;
     font-size: 1.1rem;
-    color: var(--color-primary);
+    color: var(--primary-color);
 }
 .menu-opcoes ul{
     list-style: none;
@@ -68,7 +69,7 @@ body{
     margin: 0.625rem 0;
 }
 .menu-opcoes a{
-    color: var(--color-txt);
+    color: var(--text-color);
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -78,32 +79,82 @@ body{
     transition: background 0.3s;
 }
 .menu-opcoes a:hover{
-    background: var(--color-secondary);
+    background: var(--secondary-color);
 }
-
+/* .menu{
+    background-color: var(--card-background);
+    padding: 2rem;
+    height: 100vh;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+.foto-menu{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.foto-menu img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+.foto-menu h1{
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+.foto-menu span{
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    display: block;
+}
+.menu-opcoes ul{
+    list-style: none;
+}
+.menu-opcoes a{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+.menu-opcoes a:hover{
+    background-color: var(--primary-color);
+    color: white;
+}
+.menu-opcoes i{
+    margin-right: 1rem;
+    width: 20px;
+}
+ */
 /* ========== PAINEL PRINICIPAL ========== */
 .welcome{
-    background: var(--color-painel);
-    border-radius: 0.625rem;
-    padding: 1rem;
     margin-bottom: 2rem;
 }
 .welcome h1{
-    color: var(--color-primary);
     font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
 }
 .welcome p{
+    color: var(--primary-color);
     font-size: 1.25rem;
 }
-
+.grid-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
 .card-status{
     background: var(--color-painel);
-    border-left: 5px solid var(--color-secondary);
-    padding: 1rem;
+    border-left: 5px solid var(--secondary-color);
+    padding: 1.5rem;
     border-radius: 0.625rem;
     box-shadow: 0 0 10px rgba(162, 3, 194, 0.2);
-    max-width: 400px;
-    margin-bottom: 2rem;
+   /*  max-width: 400px; SE FICAR RUIM SEM É SÓ DESCOMENTAR :)
+    margin-bottom: 2rem; */
 }
 .card-header{
     display: flex;
@@ -113,30 +164,60 @@ body{
 }
 .card-header i{
     font-size: 1.5rem;
-    color: var(--color-primary);
+    color: var(--secondary-color);
 }
 .card-header h2{
     font-size: 1.5rem;
-    color: var(--color-primary);
+    color: var(--secondary-color);
     margin: 0;
 }
 .card-body p{
     font-size: 1.1rem;
     margin: 0.5rem 0;
 }
-.card-body .status{
+.status{
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
     font-weight: bold;
 }
-.card-body .status.online{
-    color: var(--status-online);
+.status.online{
+    background-color: rgba(34, 197, 94, 0.1);
+    color: var(--success-color);
 }
-.card-body .status.offline{
-    color: var(--status-offline);
+.status.offline{
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--danger-color);
 }
-/* ========== COMANDOS ========== */
 
-/* ========== CONFIGURAÇÕES ========== */
-
+.activity-log{
+    margin-top: 2rem;
+}
+.activity-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.activity-item{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--card-background);
+    border-radius: 8px;
+}
+.activity-item i{
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-right: 1rem;
+}
+.activity-content p{
+    margin: 0;
+    color: var(--text-color);
+}
+.activity-content small{
+    color: var(--primary-color);
+    font-size: 0.875rem;
+}
 /* ========== FOOTER ========== */
 .rodape{
     position: fixed;
