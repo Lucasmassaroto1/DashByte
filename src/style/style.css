@@ -219,7 +219,7 @@ body{
     font-size: 0.875rem;
 }
 /* ========== FOOTER ========== */
-.rodape{
+/* .rodape{
     position: fixed;
     bottom: 0;
     left: 250px;
@@ -228,7 +228,7 @@ body{
     padding: 1rem;
     background: var(--color-painel);
     font-size: 0.9rem;
-}
+} */
 
 /* ========== ANIMAÇÕES ========== */
 
